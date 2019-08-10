@@ -25,10 +25,10 @@
 }
 
 /* Tricky / Interaction not obvious and not annotated, first :hover */
-a {
+span {
   text-decoration: none;
 }
 
-a:hover {
+span:hover {
   cursor: pointer;
 }

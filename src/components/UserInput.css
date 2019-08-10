@@ -1,0 +1,54 @@
+.user-input {
+  width: 400px;
+  padding: 40px;
+  border-radius: 3px;
+  background: white;
+  margin: 0 auto;
+}
+
+input[type="number"],
+button[type="submit"] {
+  display: block;
+  width: 90%;
+  height: auto;
+  font-size: 18px;
+  text-align: left;
+  padding: 15px;
+  border: 2px solid #e7e7e7;
+  border-radius: 3px;
+  background: #fcfcfc;
+  margin: 10px auto 20px;
+  transition: opacity 0.4s;
+}
+
+button[type="submit"] {
+  height: auto;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  background: #15cd72;
+  border: 0;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #285730;
+  -webkit-transition: background 0.1s;
+  -moz-transition: background 0.1s;
+  -o-transition: background 0.1s;
+  transition: background 0.1s;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* Webkit browsers like Safari and Chrome */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

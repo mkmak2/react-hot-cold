@@ -5,8 +5,8 @@ import "./Navigation.css";
 export default function Navigation(props) {
   return (
     <div className="nav-bar">
-      <a className="nav-link-what">WHAT?</a>
-      <a className="nav-link">+ NEW GAME</a>
+      <span className="nav-link-what">WHAT?</span>
+      <span className="nav-link">+ NEW GAME</span>
     </div>
   );
 }
