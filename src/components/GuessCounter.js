@@ -2,7 +2,8 @@ import React from "react";
 
 class GuessCounter extends React.Component {
   render() {
-    return <div className="counter">Guess Counter!!!</div>;
+    const counter = Object.keys(this.props.numberOfGuesses).length;
+    return <h2 className="count">Guess # {counter}</h2>;
   }
 }
 

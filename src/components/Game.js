@@ -33,6 +33,9 @@ class Game extends React.Component {
         <Response />
         <div className="input-section">
           <UserInput enterInput={this.enterInput} />
+          <section className="counter-section">
+            <GuessCounter numberOfGuesses={this.state.guesses} />
+          </section>
           <section className="guesses">
             {Object.keys(this.state.guesses).map(key => (
               <UserAnswers
@@ -43,7 +46,6 @@ class Game extends React.Component {
             ))}
           </section>
         </div>
-        <GuessCounter />
       </div>
     );
   }
