@@ -6,6 +6,8 @@ import UserInput from "./UserInput";
 import GuessCounter from "./GuessCounter";
 import UserAnswers from "./UserAnswers";
 
+import "./Game.css";
+
 class Game extends React.Component {
   constructor(props) {
     super(props);
@@ -27,13 +29,21 @@ class Game extends React.Component {
   render() {
     return (
       <div className="Hot-or-Cold">
-        <div className="menu">
-          <Header />
-        </div>
+        <Header />
         <Response />
-        <UserInput enterInput={this.enterInput} />
+        <div className="input-section">
+          <UserInput enterInput={this.enterInput} />
+          <section className="guesses">
+            {Object.keys(this.state.guesses).map(key => (
+              <UserAnswers
+                key={key}
+                index={key}
+                answers={this.state.guesses[key]}
+              />
+            ))}
+          </section>
+        </div>
         <GuessCounter />
-        <UserAnswers />
       </div>
     );
   }

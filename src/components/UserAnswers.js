@@ -1,8 +1,10 @@
 import React from "react";
+import "./UserAnswers.css";
 
 class UserAnswers extends React.Component {
   render() {
-    return <div className="ans">User Input!!!</div>;
+    const { inputs } = this.props.answers;
+    return <ul className="input-numbers">{inputs}</ul>;
   }
 }
 
