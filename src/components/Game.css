@@ -1,6 +1,6 @@
 .guesses {
   display: block;
-  width: 28%;
+  width: 90%;
   height: auto;
   font-size: 18px;
   text-align: left;
@@ -14,7 +14,7 @@
 
 .counter-section {
   display: block;
-  width: 28%;
+  width: 90%;
   height: 60px;
   text-align: center;
   font-size: 15px;
@@ -23,4 +23,13 @@
   margin: 5px auto 20px;
   transition: opacity 0.4s;
   background: #aeb6bf;
+}
+
+.app {
+  border: 2px solid black;
+  border-radius: 3px;
+  margin: 0 auto;
+  width: 500px;
+  height: 450px;
+  background: #808080;
 }
