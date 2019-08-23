@@ -1,5 +1,7 @@
 ## This is a guessing game build on React
 
+Live Link of the App: https://react-hot-cold-anu.herokuapp.com/
+
 ### The game goes like this:
 
 1. The app will pick a random secret number between 1 to 100 and keep it hidden.
