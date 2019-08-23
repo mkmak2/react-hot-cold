@@ -2,6 +2,13 @@ language: node_js
 node_js: node
 cache:
   directories:
-    - node_modules
+  - node_modules
 env:
-  - CI=true
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: SkWl9hKl+IOhZ0Z3PdAzPNZL1+HtLQ2Eh0HVU8LCMDnXPOF0eQ5UKe30BQiZiihdqjhPV8s+GKo1B6zzGNoalCkjVk141ahYQMq1wTphHyj67uyo/0D7V8qc7O5qubG/clKOWrG0cpGNdrs4AC6Iy/5NTPDCvs3tVE8HWbs8btdjuSJJLD9SK+JldvQmtOrLievGfB4hAMChlWB3lJ4qgL1ZXQNet4PZiADi6HKGtq6YWj8MTX4XohX2DLZCSb24Jw5p24LMvPIPoEX7BYWCHpSMvFFhd/pGCnXTcQsCRC/b+130lr+AW8NccMCuvle3is9W2TMFwR/Db/Dzeq4TiPb7Rat0UW5n5cqWNuyxrIgvl+SxcCoLlsN1Y0Hzu7DkaK+BGfFfxfV+eWoge3i8ghBlzU+r+XadWKXXLpv/99Dd9PPX6wYC9K9aX/wEH5XjLLz+dShbPr3zya8kcAfk6P5wKZMArNHKuoaV4E9MR0sUY18qAKi+gIpzuNRBzvtUBmhOArb5cjHb28eQ3MoaDyvvuMNRq692kVKpcPpkMKcwzqI9TQ15QmA0R13RoKzcqFF6mkpIyRTW7q1i9MlsDUpaqRfy+ElvnmVDMvhe13JOURd8XE9MkJrdujnR99+Rp7xlkpZccakCjslL6BBgqJXg5drY7GeGvkU42wfyzGs=
+  app: react-hot-cold-anu
+  on:
+    repo: anamika8/react-hot-cold
