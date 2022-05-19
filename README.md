@@ -1,6 +1,6 @@
 ## This is a guessing game build on React
 
-Live Link of the App: https://react-hot-cold-anu.herokuapp.com/
+Live Link of the App: https://hotandcoldgames.herokuapp.com/
 
 ### The game goes like this:
 
