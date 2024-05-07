@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  building:
+    build: ./build
+    networks:
+      - network
+    image: build
+  test:
+    build: ./test
+    networks:
+      - network
+    depends_on:
+      - building
+
+networks:
+  network:
+    driver: bridge
