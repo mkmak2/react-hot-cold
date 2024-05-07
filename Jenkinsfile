@@ -27,7 +27,7 @@ pipeline {
             steps {
                 echo "Testing"
                 sh '''
-                docker build -t react-hot-cold:latest -f ./test/Dockerfile
+                docker build -t react-hot-cold:latest -f ./test/Dockerfile .
                 '''
             }
         }
