@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   building:
-    build: ./build
+    build: ./building
     networks:
       - network
     image: build

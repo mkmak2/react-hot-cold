@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo "Building"
                 sh '''
-                docker build -t reace-hot-cold:latest -f ./build/Dockerfile .
+                docker build -t reace-hot-cold:latest -f ./building/Dockerfile .
                 '''
             }
         }
