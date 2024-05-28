@@ -58,6 +58,16 @@ pipeline {
                 '''
             }
         }
+
+        stage('Deploy') {
+            steps {
+                echo "Deploy"
+                sh '''
+                    docker build -t react-hot-cold:latest -f ./deploy/Dockerfile .
+                    docker run -p 3000:3000 -d --rm --name deployment react-hot-cold-deploy:latest
+                '''
+            }
+        }
     }
     post{
         always{
