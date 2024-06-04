@@ -19,6 +19,9 @@ pipeline {
                 echo "Building"
                 sh '''
                 docker build -t building -f ./building/Dockerfile .
+                docker run --name build_container react-hot-cold:latest
+                docker cp build_container:/react-hot-cold/build ./artefakty
+                docker logs build_container > log_build.txt
                 '''
             }
         }
@@ -28,33 +31,8 @@ pipeline {
                 echo "Testing"
                 sh '''
                 docker build -t react-hot-cold:latest -f ./test/Dockerfile .
-                '''
-            }
-        }
-
-        stage("Deploy") {
-              steps {
-                  echo "Deploy"
-                  sh '''
-                  
-                  docker compose up
-                  docker compose logs building > log_build.txt
-                  docker compose logs test > log_test.txt
-
-                  '''
-              }
-        }
-
-        stage("Production") {
-            steps {
-                echo "Production"
-                sh '''
-                
-                TIMESTAMP=$(date +%Y%m%d%H%M%S)
-                tar -czf artifact_$TIMESTAMP.tar.gz log_build.txt log_test.txt
-
-                docker compose down
-
+                 docker run --name test_container react-hot-cold-test:latest
+                docker logs test_container > log_test.txt
                 '''
             }
         }
