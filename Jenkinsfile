@@ -61,7 +61,7 @@ pipeline {
                 git config --global user.email "mkmak.code@gmail.com"
                 git config user.name "mkmak2"
                 git tag -a ${NEXT_VERSION} -m "tag"
-                git push https://${GITHUB_CREDENTIALS_PSW}@github.com/mkmak2/react-hot-cold:${NEXT_VERSION}
+                git push https://${GITHUB_CREDENTIALS_PSW}@github.com/mkmak2/react-hot-cold ${NEXT_VERSION}
 
                 echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin
                 NUMBER='''+ env.BUILD_NUMBER +'''
