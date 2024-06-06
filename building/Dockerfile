@@ -9,5 +9,5 @@ RUN apt-get install -y git
 RUN git clone https://$TOKEN:x-oatuh-basic@github.com/anamika8/react-hot-cold.git
 WORKDIR /react-hot-cold
 
-RUN npm install
+RUN npm installqweqeqew
 RUN npm run build
