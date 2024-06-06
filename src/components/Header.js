@@ -9,7 +9,7 @@ class Header extends React.Component {
     return (
       <header className="top">
         <Navigation />
-        <h1>KMAKU 4</h1>
+        <h1>KMAKU GIGA KOKS</h1>
       </header>
     );
   }
