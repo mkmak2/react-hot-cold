@@ -1,3 +1,3 @@
-FROM building
+FROM build_container
 
 CMD CI=TRUE npm test
