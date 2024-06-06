@@ -1,3 +1,3 @@
-FROM react-hot-cold-build:latest
+FROM react-hot-cold:latest
 
 CMD CI=TRUE npm test
